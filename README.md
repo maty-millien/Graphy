@@ -159,4 +159,4 @@ Built with care by **[Gabriel BRUMENT](https://github.com/SobshDev)**, **[RaphaÃ
 
 ## License
 
-Private â€” all rights reserved (for now).
+Licensed under the [GNU Affero General Public License v3.0](LICENSE).
