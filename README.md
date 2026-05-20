@@ -42,21 +42,21 @@ Graphy flips the model:
 
 ## Tech stack
 
-| Layer            | Choice                                                                          |
-| ---------------- | ------------------------------------------------------------------------------- |
-| Desktop shell    | [Electron](https://www.electronjs.org/) 42                                      |
-| Web framework    | [TanStack Start](https://tanstack.com/start) + TanStack Router + React 19       |
-| Graph canvas     | [React Flow](https://reactflow.dev) (`@xyflow/react`) + [Dagre](https://github.com/dagrejs/dagre) auto-layout |
-| Code editor      | [CodeMirror 6](https://codemirror.net) (one-dark theme, JS/TS language pack)    |
-| UI primitives    | [shadcn/ui](https://ui.shadcn.com), [Radix](https://www.radix-ui.com), [Base UI](https://base-ui.com), [cmdk](https://cmdk.paco.me) |
-| Styling          | [Tailwind CSS](https://tailwindcss.com) 4 + `tw-animate-css`                    |
-| Icons            | [Lucide](https://lucide.dev)                                                    |
-| Static analysis  | [ts-morph](https://ts-morph.com) (TypeScript compiler API)                      |
-| Git              | [`simple-git`](https://github.com/steveukx/git-js)                              |
-| AI providers     | [`@anthropic-ai/sdk`](https://www.npmjs.com/package/@anthropic-ai/sdk), [`@openai/codex-sdk`](https://www.npmjs.com/package/@openai/codex-sdk), OpenRouter |
-| Bundler & dev    | [Vite](https://vitejs.dev) 8                                                    |
-| Package manager  | [Bun](https://bun.sh)                                                           |
-| Tests            | [Vitest](https://vitest.dev) 4                                                  |
+| Layer           | Choice                                                                                                                                                     |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Desktop shell   | [Electron](https://www.electronjs.org/) 42                                                                                                                 |
+| Web framework   | [TanStack Start](https://tanstack.com/start) + TanStack Router + React 19                                                                                  |
+| Graph canvas    | [React Flow](https://reactflow.dev) (`@xyflow/react`) + [Dagre](https://github.com/dagrejs/dagre) auto-layout                                              |
+| Code editor     | [CodeMirror 6](https://codemirror.net) (one-dark theme, JS/TS language pack)                                                                               |
+| UI primitives   | [shadcn/ui](https://ui.shadcn.com), [Radix](https://www.radix-ui.com), [Base UI](https://base-ui.com), [cmdk](https://cmdk.paco.me)                        |
+| Styling         | [Tailwind CSS](https://tailwindcss.com) 4 + `tw-animate-css`                                                                                               |
+| Icons           | [Lucide](https://lucide.dev)                                                                                                                               |
+| Static analysis | [ts-morph](https://ts-morph.com) (TypeScript compiler API)                                                                                                 |
+| Git             | [`simple-git`](https://github.com/steveukx/git-js)                                                                                                         |
+| AI providers    | [`@anthropic-ai/sdk`](https://www.npmjs.com/package/@anthropic-ai/sdk), [`@openai/codex-sdk`](https://www.npmjs.com/package/@openai/codex-sdk), OpenRouter |
+| Bundler & dev   | [Vite](https://vitejs.dev) 8                                                                                                                               |
+| Package manager | [Bun](https://bun.sh)                                                                                                                                      |
+| Tests           | [Vitest](https://vitest.dev) 4                                                                                                                             |
 
 ## Getting started
 
@@ -92,20 +92,20 @@ Artifacts land in `release/`.
 
 ## Scripts
 
-| Command                 | Description                                                        |
-| ----------------------- | ------------------------------------------------------------------ |
-| `bun run dev`           | Build the parser bundle (watch), start Vite, launch Electron.      |
-| `bun run dev:electron`  | Start Electron against an already-running web dev server.          |
-| `bun run dev:parser`    | Watch and rebundle the parser CLI into `dist-electron/parser.cjs`. |
-| `bun run build`         | Build the parser bundle and the web app.                           |
-| `bun run build:parser`  | One-shot bundle of the parser CLI into `dist-electron/parser.cjs`. |
-| `bun run start:desktop` | Build the app and launch Electron.                                 |
-| `bun run lint`          | Run ESLint.                                                        |
-| `bun run format`        | Format with Prettier and auto-fix ESLint issues.                   |
-| `bun run check`         | Check formatting with Prettier.                                    |
-| `bun run tidy`          | `format` + `lint` — one-shot cleanup before handing off work.      |
-| `bun run parser:dump`   | Run the parser against a target project and dump the graph.        |
-| `bun run dist:{mac,linux,win}` | Build and package the desktop app for the given platform.   |
+| Command                        | Description                                                        |
+| ------------------------------ | ------------------------------------------------------------------ |
+| `bun run dev`                  | Build the parser bundle (watch), start Vite, launch Electron.      |
+| `bun run dev:electron`         | Start Electron against an already-running web dev server.          |
+| `bun run dev:parser`           | Watch and rebundle the parser CLI into `dist-electron/parser.cjs`. |
+| `bun run build`                | Build the parser bundle and the web app.                           |
+| `bun run build:parser`         | One-shot bundle of the parser CLI into `dist-electron/parser.cjs`. |
+| `bun run start:desktop`        | Build the app and launch Electron.                                 |
+| `bun run lint`                 | Run ESLint.                                                        |
+| `bun run format`               | Format with Prettier and auto-fix ESLint issues.                   |
+| `bun run check`                | Check formatting with Prettier.                                    |
+| `bun run tidy`                 | `format` + `lint` — one-shot cleanup before handing off work.      |
+| `bun run parser:dump`          | Run the parser against a target project and dump the graph.        |
+| `bun run dist:{mac,linux,win}` | Build and package the desktop app for the given platform.          |
 
 ## Project structure
 
