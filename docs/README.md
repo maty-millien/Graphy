@@ -14,7 +14,7 @@ wired in as first-class collaborators.
 ![Top language](https://img.shields.io/github/languages/top/maty-millien/Graphy?style=flat-square)
 ![Repo size](https://img.shields.io/github/repo-size/maty-millien/Graphy?style=flat-square)
 
-![Graphy showcase](docs/showcase.png)
+![Graphy showcase](showcase.png)
 
 ## Why Graphy?
 
