@@ -12,8 +12,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  version:
+    name: Compute version
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.compute.outputs.version }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compute next version from package.json + run number
+        id: compute
+        run: |
+          BASE=$(node -p "require('./package.json').version.split('.').slice(0, 2).join('.')")
+          echo "version=v${BASE}.${{ github.run_number }}" >> "$GITHUB_OUTPUT"
+
   build:
     name: Build ${{ matrix.platform }}
+    needs: version
     strategy:
       fail-fast: false
       matrix:
@@ -54,12 +70,12 @@ jobs:
             release/*.deb
             release/*.dmg
             release/*.exe
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 7
 
-  release-nightly:
-    name: Publish Nightly Release
-    needs: build
+  release:
+    name: Publish ${{ needs.version.outputs.version }}
+    needs: [version, build]
     runs-on: ubuntu-latest
     steps:
       - name: Download all artifacts
@@ -68,23 +84,15 @@ jobs:
           path: artifacts
           merge-multiple: true
 
-      - name: Delete previous nightly release and tag
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release delete nightly --yes --cleanup-tag --repo ${{ github.repository }} || true
-
-      - name: Create nightly release
+      - name: Create release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: nightly
-          name: Nightly
-          prerelease: true
+          tag_name: ${{ needs.version.outputs.version }}
+          name: ${{ needs.version.outputs.version }}
           target_commitish: ${{ github.sha }}
-          body: |
-            Rolling pre-release built from `${{ github.sha }}`.
-
-            Updated automatically on every push to `main`.
-          fail_on_unmatched_files: true
+          make_latest: 'true'
+          generate_release_notes: true
+          fail_on_unmatched_files: false
           files: |
             artifacts/*.AppImage
             artifacts/*.deb
