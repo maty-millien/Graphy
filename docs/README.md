@@ -1,3 +1,5 @@
+<div align="center">
+
 # Graphy
 
 **Read code as a graph, not as a wall of text.**
@@ -8,11 +10,14 @@ relationships that actually matter (ownership, calls, references, JSX renders,
 hook usage, instantiation, inheritance) — with Claude, Codex and OpenRouter
 wired in as first-class collaborators.
 
-![License](https://img.shields.io/github/license/maty-millien/Graphy?style=flat-square)
-![Last commit](https://img.shields.io/github/last-commit/maty-millien/Graphy?style=flat-square)
-![Stars](https://img.shields.io/github/stars/maty-millien/Graphy?style=flat-square)
-![Top language](https://img.shields.io/github/languages/top/maty-millien/Graphy?style=flat-square)
-![Repo size](https://img.shields.io/github/repo-size/maty-millien/Graphy?style=flat-square)
+<img src="https://img.shields.io/badge/Electron-2B2E3A?style=for-the-badge&logo=electron&logoColor=9FEAF9" />
+<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+<img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+<img src="https://img.shields.io/badge/bun-282a36?style=for-the-badge&logo=bun&logoColor=fbf0df" />
+
+</div>
 
 ![Graphy showcase](showcase.png)
 
