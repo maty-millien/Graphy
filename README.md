@@ -155,7 +155,7 @@ bun run check
 
 ## Team
 
-Built with care by **[Maty MILLIEN](https://github.com/maty-millien)**, **[Gabriel BRUMENT](https://github.com/SobshDev)**, **[Raphaël BERTAINA-LOICHEMOL](https://github.com/raph-bl)** and **[Nawfal HASSANI](https://github.com/nawfal-hassani)**.
+Built with care by **[Gabriel BRUMENT](https://github.com/SobshDev)**, **[Raphaël BERTAINA-LOICHEMOL](https://github.com/raph-bl)**, **[Nawfal HASSANI](https://github.com/nawfal-hassani)** and **[Maty MILLIEN](https://github.com/maty-millien)**.
 
 ## License
 
